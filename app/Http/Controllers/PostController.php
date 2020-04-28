@@ -196,4 +196,15 @@ class PostController extends Controller
 
         return $recents;
     }
+
+
+    public function trendPosts()
+    {
+
+        $postsTrend = Post::where('trend', '>', 0)
+            ->orderBy('trend', 'ASC')
+            ->get();
+
+        return $postsTrend;
+    }
 }

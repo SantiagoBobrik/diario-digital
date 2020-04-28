@@ -51,7 +51,8 @@
                                 <h3 class="post-title"><a href="/noticia/{{$post->id}}">{{$post->tittle}}</a></h3>
                                 <ul class="post-meta">
                                     <li><a href="author.html">{{$post->author}}</a></li>
-                                    <li>20 April 2018</li>
+                                    <li>{{$post->created_at->format('d/m/y') }}</li>
+
                                 </ul>
                             </div>
                         </div>

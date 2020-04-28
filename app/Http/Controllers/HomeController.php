@@ -27,6 +27,7 @@ class HomeController extends Controller
 
 
         $posts = $postController->getPostbyCategory();
+        $postsTrend = $postController->trendPosts();
 
 
         $recents = $postController->recentPost();
@@ -40,6 +41,6 @@ class HomeController extends Controller
         $categories = $categoriesController->getAllCategory();
 
 
-        return view('index', compact('posts', 'ads', 'recents', 'normalAds', 'horizontalAds', 'categories'));
+        return view('index', compact('posts', 'ads', 'recents', 'normalAds', 'horizontalAds', 'categories', 'postsTrend'));
     }
 }

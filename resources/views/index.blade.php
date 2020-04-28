@@ -37,7 +37,7 @@
 	<div class="container">
 
 		<div class="row hot-post">
-			@foreach ($posts as $post)
+			@foreach ($postsTrend as $post)
 			@if ($post->trend == 1)
 			<div class="col-md-8 hot-post-left mt-3">
 
@@ -60,7 +60,7 @@
 
 
 			<div class="col-md-4 hot-post-right">
-				@foreach ($posts as $post)
+				@foreach ($postsTrend as $post)
 				@if ($post->trend == 2)
 
 				<div class="post post-thumb">
@@ -79,7 +79,7 @@
 
 
 
-				@foreach ($posts as $post)
+				@foreach ($postsTrend as $post)
 				@if ($post->trend == 3)
 
 
