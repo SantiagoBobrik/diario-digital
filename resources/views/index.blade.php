@@ -192,38 +192,6 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="col-md-4">
-
-						<div class="post post-sm">
-							<a class="post-img" href="/noticia/{{$post->id}}"><img src="storage/{{$post->image}}"
-									alt=""></a>
-							<div class="post-body">
-								<div class="post-category">
-									<a href="seccion/{{$category->slug}}">{{$post->getCategory->name}}</a>
-								</div>
-								<h3 class="post-title title-sm"><a href="/noticia/{{$post->id}}">{{$post->tittle}}</a>
-								</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-
-						<div class="post post-sm">
-							<a class="post-img" href="/noticia/{{$post->id}}"><img src="storage/{{$post->image}}"
-									alt=""></a>
-							<div class="post-body">
-								<div class="post-category">
-									<a href="seccion/{{$category->slug}}">{{$post->getCategory->name}}</a>
-								</div>
-								<h3 class="post-title title-sm"><a href="/noticia/{{$post->id}}">{{$post->tittle}}</a>
-								</h3>
-							</div>
-						</div>
-					</div>
-
-
-
 					@endif
 
 

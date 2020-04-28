@@ -26,7 +26,9 @@ class HomeController extends Controller
         $postController = new PostController;
 
 
-        $posts = $postController->getAllPosts();
+        $posts = $postController->getPostbyCategory();
+
+
         $recents = $postController->recentPost();
 
 

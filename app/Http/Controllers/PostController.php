@@ -4,10 +4,37 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Ad;
+use App\Category;
 use Illuminate\Http\Request;
+
 
 class PostController extends Controller
 {
+
+
+
+
+    public function getPostbyCategory()
+    {
+        $categoriesController = new CategoryController;
+
+
+        $categories = $categoriesController->getAllCategory();
+
+        $postArray = [];
+        foreach ($categories as $category) {
+            $posts = Post::where('category_id', '=', $category->id)
+                ->orderBy('created_at', 'DESC')
+                ->limit(3)->get();
+
+
+            foreach ($posts as $post) {
+                array_push($postArray, $post);
+            }
+        }
+
+        return $postArray;
+    }
 
     public function getAllPosts()
     {
