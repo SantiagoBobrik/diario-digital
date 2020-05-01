@@ -1,0 +1,46 @@
+version: "3"
+services:
+  #PHP Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php-image
+    container_name: admin-php
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    tty: true
+    # command: ["composer", "install"]
+    environment:
+      SERVICE_NAME: healthyorchards
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: admin-nginx
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+
+  #MySQL Service
+  db:
+    image: mysql:5.7.22
+    container_name: admin-db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: healthyorchards
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
