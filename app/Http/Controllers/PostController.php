@@ -46,6 +46,7 @@ class PostController extends Controller
         return $posts;
     }
 
+
     public function postDetail($id)
     {
         $adController = new AdController;
@@ -56,8 +57,8 @@ class PostController extends Controller
 
         $post = Post::find($id);
         $ads = Ad::all();
-        $categoriesController = new CategoryController;
-        $categories = $categoriesController->getAllCategory();
+
+        $categories = $categoryController->getAllCategory();
 
         return view("post-detail", compact('post', 'normalAds', 'horizontalAds', 'categories'));
     }

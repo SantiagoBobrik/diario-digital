@@ -1,0 +1,24 @@
+server{
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/la-informacion/public;
+
+    index index.php index.html index.htm index.ngix-debian.html;
+
+    server_name _;
+
+    location  / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        include snippits/fastcgi-php.conf;
+        fastcgi_pass unis:/run/php/php.7.0-fpm.sock;
+        }
+
+    location ~ /\ .
+    {
+        deny all;
+    }
+}

@@ -154,15 +154,7 @@
     <footer id="footer">
         <!-- container -->
         <div class="container">
-            <!-- row -->
-            <div class="row">
 
-
-
-            </div>
-            <!-- /row -->
-
-            <!-- row -->
             <div class="footer-bottom row">
                 <div class="col-md-6 col-md-push-6">
                     <ul class="footer-nav">
@@ -178,8 +170,7 @@
                     <div class="footer-copyright">
                         Copyright &copy;<script>
                             document.write(new Date().getFullYear());
-                        </script> All rights reserved by Diario la
-                        informacion
+                        </script> Todos los derechos reservados Diario La Informacion Cañuelas
 
                     </div>
                 </div>
