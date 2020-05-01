@@ -16,21 +16,19 @@ class VmMigrate extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->string('tittle', 500);
-            $table->string('description', 5000);
-            $table->integer('content', 10000);
-            $table->i2nteger('category_id');
+            $table->text('tittle');
+            $table->text('description');
+            $table->text('content');
+            $table->integer('category_id');
             $table->integer('trend');
             $table->string('image', 250);
-            $table->timestamp('updated_at');
-            $table->timestamp('created_at');
+            $table->timestamps();
         });
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name', 250);
             $table->string('slug', 250);
-            $table->timestamp('updated_at');
-            $table->timestamp('created_at');
+            $table->timestamps();
         });
         Schema::create('ads', function (Blueprint $table) {
             $table->id();
@@ -39,8 +37,7 @@ class VmMigrate extends Migration
             $table->string('type', 250);
             $table->integer('position');
             $table->string('url', 250);
-            $table->timestamp('updated_at');
-            $table->timestamp('created_at');
+            $table->timestamps();
         });
     }
 
@@ -51,6 +48,8 @@ class VmMigrate extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('posts');
+        Schema::dropIfExists('ads');
+        Schema::dropIfExists('categories');
     }
 }
