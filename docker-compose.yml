@@ -40,7 +40,7 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: healthyorchards
+      MYSQL_DATABASE: la_informacion_db
       MYSQL_ROOT_PASSWORD: root
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
