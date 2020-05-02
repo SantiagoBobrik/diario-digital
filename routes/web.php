@@ -27,10 +27,7 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/noticias', 'DashboardController@getAllPost')->middleware('auth');
 
 
-Route::get('/dashboard/noticias/agregar', function () {
-
-    return view('adm-add-post');
-})->middleware('auth');
+Route::get('/dashboard/noticias/agregar', 'PostController@viewAddPost')->middleware('auth');
 Route::post('/dashboard/noticias/agregar', 'PostController@addPost')->middleware('auth');
 Route::post('/dashboard/noticias/eliminar', 'PostController@deletePost')->middleware('auth');
 Route::get('/dashboard/noticias/editar/{id}', 'PostController@editPost')->middleware('auth');

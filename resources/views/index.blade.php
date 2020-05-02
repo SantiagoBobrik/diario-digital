@@ -148,7 +148,7 @@
 					<div class="col-md-6">
 						<div class="post">
 
-							<a style="heigth:100px" class="post-img" href="/noticia/{{$post->id}}"><img class="pepe"
+							<a style="heigth:100px" class="post-img" href="/noticia/{{$recent->id}}"><img class="pepe"
 									src="storage/{{$recent->image}}" alt=""></a>
 
 
@@ -156,7 +156,7 @@
 								<div class="post-category">
 									<a href="/seccion/{{$recent->getCategory->slug}}">{{$recent->getCategory->name}}</a>
 								</div>
-								<h3 class="post-title"><a href="/noticia/{{$post->id}}">{{$recent->tittle}}</a></h3>
+								<h3 class="post-title"><a href="/noticia/{{$recent->id}}">{{$recent->tittle}}</a></h3>
 
 							</div>
 						</div>

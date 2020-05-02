@@ -78,11 +78,9 @@
                         <label for="exampleFormControlSelect1">Categoria</label>
                         <select name="cateroy_id" class="form-control" id="exampleFormControlSelect1">
                             <option selected value="{{$post->getCategory->id}}">{{$post->getCategory->name}}</option>
-                            <option value="1">Sociales</option>
-                            <option value="2">Policial</option>
-                            <option value="3">Deportes</option>
-                            <option value="4">Interes General</option>
-                            <option value="5">Politica</option>
+                            @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>

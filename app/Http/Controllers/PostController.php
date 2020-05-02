@@ -125,10 +125,12 @@ class PostController extends Controller
 
     public function editPost($id)
     {
+        $categoriesController = new CategoryController;
+        $categories = $categoriesController->getAllCategory();
 
         $post = Post::find($id);
 
-        return view('adm-edit-post', compact('post'));
+        return view('adm-edit-post', compact('post', 'categories'));
     }
 
     public function updatePost(Request $req)
@@ -207,5 +209,16 @@ class PostController extends Controller
             ->get();
 
         return $postsTrend;
+    }
+
+    public function viewAddPost()
+    {
+        $categoriesController = new CategoryController;
+
+
+        $categories = $categoriesController->getAllCategory();
+
+
+        return view('adm-add-post', compact('categories'));
     }
 }
