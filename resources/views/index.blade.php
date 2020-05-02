@@ -46,7 +46,7 @@
 							alt=""></a>
 					<div class="post-body">
 						<div class="post-category">
-							<a href="seccion/{{$post->getCategory->slug}}">Prueba</a>
+							<a href="seccion/{{$post->getCategory->slug}}">{{$post->getCategory->name}}</a>
 						</div>
 						<h3 class="post-title title-trend"><a href="/noticia/{{$post->id}}">{{$post->tittle}}</a></h3>
 
