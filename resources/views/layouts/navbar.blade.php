@@ -179,6 +179,10 @@
             <!-- /row -->
         </div>
         <!-- /container -->
+
+        <div class="footer-copyright text-center" style="width: 100%">
+            Desarrolado por <a href="mailto:santiago.bobrik@gmail.com"> <strong>Santiago Bobrik </strong> </a>
+        </div>
     </footer>
     <!-- /FOOTER -->
 
