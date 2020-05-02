@@ -40,7 +40,7 @@
 
                     <!-- logo -->
                     <div class="nav-logo">
-                        <a href="/" class="logo img-fluid"><img src="/storage/logo.png" alt=""></a>
+                        <a href="/" class="logo img-fluid"><img src="{{asset('logo.png')}}" alt=""></a>
                     </div>
                     <!-- /logo -->
 
@@ -115,7 +115,8 @@
 
 
                     <div class="nav-logo-fix ml-4 nav-btns  ">
-                        <a href="/" class="logo-fix img-fluid"><img src="/storage/logo.png" height="40px" alt=""></a>
+                        <a href="/" class="logo-fix img-fluid"><img src="{{asset('logo.png')}}" height="40px"
+                                alt=""></a>
                     </div>
 
                     <!-- search & aside toggle -->
