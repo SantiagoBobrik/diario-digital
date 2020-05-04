@@ -18,7 +18,7 @@ class VmMigrate extends Migration
             $table->integer('user_id');
             $table->text('tittle');
             $table->text('description');
-            $table->text('content');
+            $table->text('content', 10000);
             $table->integer('category_id');
             $table->integer('trend');
             $table->string('image', 250);
