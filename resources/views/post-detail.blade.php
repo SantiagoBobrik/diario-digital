@@ -99,9 +99,9 @@ data-stellar-background-ratio="0.5"></div>
 
                 <!-- post content -->
                 <!-- post content -->
-                <div class=" d-flex justify-content-between ">
+                <div class="">
 
-                    <div class="col-lg-8 col-sm-12 ">
+                    <div class="col-md-8 col-lg-8 col-sm-12 col-12 ">
 
 
                         {!!$post->description!!}
@@ -114,7 +114,7 @@ data-stellar-background-ratio="0.5"></div>
                     </div>
 
                     {{-- anuncios cuadrados --}}
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-lg-4 col-sm-12  col-12">
 
 
                         @foreach ($normalAds as $ad)
