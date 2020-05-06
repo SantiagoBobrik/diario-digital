@@ -101,7 +101,7 @@ data-stellar-background-ratio="0.5"></div>
                 <!-- post content -->
                 <div class=" d-flex justify-content-between ">
 
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-sm-12 ">
 
 
                         {!!$post->description!!}
