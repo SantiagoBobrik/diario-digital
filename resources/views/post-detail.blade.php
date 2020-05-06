@@ -6,9 +6,34 @@
 
 
 <!-- PAGE HEADER -->
-<div id="post-header" class="page-header">
+{{-- <div id="post-header" class="page-header">
     <div class="page-header-bg" style="background-image: url({{url('storage/'.$post->image)}});"
-        data-stellar-background-ratio="0.5"></div>
+data-stellar-background-ratio="0.5"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="post-category">
+                <a href="category.html">{{$post->getcategory->name}}</a>
+            </div>
+            <h1>{{$post->tittle}}</h1>
+            <ul class="post-meta">
+
+                <ul class="post-meta">
+                    <li>{{$post->created_at->format('d/m/y') }}</li>
+
+
+
+                </ul>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</div> --}}
+<div id="post-header" class="page-header">
+    <div class="page-header-bg">
+        <img width="100%" height="100%" src="{{url('storage/'.$post->image)}}" alt="">
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-10">
