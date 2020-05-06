@@ -25,7 +25,7 @@ class PostController extends Controller
         foreach ($categories as $category) {
             $posts = Post::where('category_id', '=', $category->id)
                 ->orderBy('created_at', 'DESC')
-                ->limit(3)->get();
+                ->limit(4)->get();
 
 
             foreach ($posts as $post) {

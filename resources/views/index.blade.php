@@ -178,7 +178,7 @@
 					@foreach ($posts as $post)
 					@if ($post->category_id == $category->id)
 
-					<div class="col-md-4">
+					<div class="col-md-6">
 
 						<div class="post post-sm">
 							<a class="post-img" href="/noticia/{{$post->id}}"><img src="storage/{{$post->image}}"
