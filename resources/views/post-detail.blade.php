@@ -31,8 +31,8 @@ data-stellar-background-ratio="0.5"></div>
 </div>
 </div> --}}
 <div id="post-header" class="page-header">
-    <div class="page-header-bg">
-        <img width="100%" height="100%" src="{{url('storage/'.$post->image)}}" alt="">
+    <div class="page-header-bg" data-stellar-background-ratio="0.5">
+        <img class="" height="100%" width="100%" src="{{url('storage/'.$post->image)}}" alt="">
     </div>
     <div class="container">
         <div class="row">
