@@ -3,6 +3,15 @@
 
 @section('top')
 
+<style>
+    @media only screen and (max-width: 767px) {
+        #post-header {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+    }
+</style>
+
 
 
 <!-- PAGE HEADER -->
