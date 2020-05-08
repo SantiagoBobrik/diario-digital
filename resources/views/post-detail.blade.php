@@ -9,6 +9,10 @@
     }
 
 
+    .image {
+        width: 60%
+    }
+
 
 
     .divider:after {
@@ -33,6 +37,11 @@
         .titulo {
             font-size: 30px
         }
+
+        .image {
+            width: 100%
+        }
+
     }
 </style>
 
@@ -109,7 +118,7 @@ data-stellar-background-ratio="0.5"></div>
 
                 <div class="col-md-12 col-lg-12 col-sm-12 col-12 tittle mt-4 mb-5 text-center ">
 
-                    <img class="image img-fluid" width="60%" src="{{url('storage/'.$post->image)}}" alt="">
+                    <img class="image img-fluid" src="{{url('storage/'.$post->image)}}" alt="">
 
                 </div>
 
