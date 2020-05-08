@@ -5,7 +5,6 @@
 @section('top')
 
 
-
 {{-- anuncio --}}
 
 @if (isset($horizontalAds[0]) == 1)

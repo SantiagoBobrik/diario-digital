@@ -4,10 +4,34 @@
 @section('top')
 
 <style>
+    .titulo {
+        font-size: 45px
+    }
+
+
+
+
+    .divider:after {
+        content: "";
+        display: inline-block;
+        height: 2px;
+        background-color: #e8eaed;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: -10px;
+        z-index: 10;
+
+    }
+
     @media only screen and (max-width: 767px) {
         #post-header {
             padding-top: 50px;
             padding-bottom: 80px;
+        }
+
+        .titulo {
+            font-size: 30px
         }
     }
 </style>
@@ -39,31 +63,7 @@ data-stellar-background-ratio="0.5"></div>
     </div>
 </div>
 </div> --}}
-<div id="post-header" class="page-header">
-    <div class="page-header-bg" data-stellar-background-ratio="0.5">
-        <img class="" height="100%" width="100%" src="{{url('storage/'.$post->image)}}" alt="">
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10">
-                <div class="post-category">
-                    <a href="category.html">{{$post->getcategory->name}}</a>
-                </div>
-                <h1>{{$post->tittle}}</h1>
-                <ul class="post-meta">
 
-                    <ul class="post-meta">
-                        <li>{{$post->created_at->format('d/m/y') }}</li>
-
-
-
-                    </ul>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- /PAGE HEADER -->
 
 <!-- /HEADER -->
@@ -75,6 +75,7 @@ data-stellar-background-ratio="0.5"></div>
 <div class="section">
     <div class="container">
         <div class="row">
+
             <div class="col-md-12 section-row text-center">
                 <a target="_blank" href="{{$horizontalAds[0]->url}}" style="display: inline-block;margin: auto;">
                     <img style="width: 728px; height: 90px" class="img-responsive"
@@ -96,40 +97,45 @@ data-stellar-background-ratio="0.5"></div>
         <div class="row">
             <div class="col-md-12">
 
+                <div class="col-md-12 col-lg-12 col-sm-12 col-12 tittle mb-2 mt-4 ">
 
-                <!-- post content -->
-                <!-- post content -->
-                <div class="">
+                    <h1 class=" titulo ">{{$post->tittle}}</h1>
 
-                    <div class="col-md-8 col-lg-8 col-sm-12 col-12 ">
+                </div>
+
+                <div class="col-md-12 col-lg-12 col-sm-12 col-12 tittle mb-5 ">
+                    <p class="divider p-0 mt-0">{!!$post->description!!}</p>
+                </div>
+
+                <div class="col-md-12 col-lg-12 col-sm-12 col-12 tittle mt-4 mb-5 text-center ">
+
+                    <img class="image img-fluid" width="60%" src="{{url('storage/'.$post->image)}}" alt="">
+
+                </div>
 
 
-                        {!!$post->description!!}
+
+                <div class="col-md-8 col-lg-8 col-sm-12 col-12 mt-4 ">
+                    {!!$post->content!!}
+                </div>
+
+                {{-- anuncios cuadrados --}}
+                <div class="col-md-4 col-lg-4 col-sm-12  col-12">
 
 
+                    @foreach ($normalAds as $ad)
 
+                    <div class="aside-widget text-center col-12">
 
-                        {!!$post->content!!}
+                        <a target="_blank" href="{{$ad->url}}" style="display: inline-block;margin: auto;">
+                            <img class="img-responsive" src="{{url('storage/'.$ad->image)}}" alt="">
 
+                        </a>
                     </div>
-
-                    {{-- anuncios cuadrados --}}
-                    <div class="col-md-4 col-lg-4 col-sm-12  col-12">
+                    @endforeach
 
 
-                        @foreach ($normalAds as $ad)
 
-                        <div class="aside-widget text-center col-12">
-
-                            <a target="_blank" href="{{$ad->url}}" style="display: inline-block;margin: auto;">
-                                <img class="img-responsive" src="{{url('storage/'.$ad->image)}}" alt="">
-
-                            </a>
-                        </div>
-                        @endforeach
-
-
-                    </div>
 
 
                 </div>
