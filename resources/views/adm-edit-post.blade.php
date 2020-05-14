@@ -180,6 +180,7 @@ $("#description").summernote({
         // [groupName, [list of button]]
         ["style", ["bold"]],
         ["para", ["ul", "ol"]]
+        
     ],
     callbacks: {
         // callback for pasting text only (no formatting)

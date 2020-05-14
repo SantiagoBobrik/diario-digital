@@ -1,6 +1,8 @@
 @extends('layouts.navbar')
 
-
+<meta property="og:title" content="{{$post->tittle}}">
+<meta property="og:image" content="{{url('storage/'.$post->image)}}">
+<meta property="og:url" content="http://lainformacioncanuelas.com/noticia/{{$post->id}}">
 @section('top')
 
 <style>

@@ -150,7 +150,8 @@
     toolbar: [
         // [groupName, [list of button]]
         ["style", ["bold"]],
-        ["para", ["ul", "ol"]]
+        ["para", ["ul", "ol"]],
+        ['insert', ['link', 'picture']]
     ],
     callbacks: {
         // callback for pasting text only (no formatting)
