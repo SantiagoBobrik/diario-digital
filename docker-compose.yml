@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: php-image
-    container_name: admin-php
+    container_name: informacion-php
     restart: unless-stopped
     volumes:
       - ./:/var/www
@@ -21,24 +21,24 @@ services:
   #Nginx Service
   webserver:
     image: nginx:alpine
-    container_name: admin-nginx
+    container_name: informacion-nginx
     restart: unless-stopped
     volumes:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     tty: true
     ports:
-      - "80:80"
-      - "443:443"
+      - "81:81"
+      - "444:444"
 
   #MySQL Service
   db:
     image: mysql:5.7.22
-    container_name: admin-db
+    container_name: informacion-db
     restart: unless-stopped
     tty: true
     ports:
-      - "3306:3306"
+      - "3307:3307"
     environment:
       MYSQL_DATABASE: la_informacion_db
       MYSQL_ROOT_PASSWORD: root
