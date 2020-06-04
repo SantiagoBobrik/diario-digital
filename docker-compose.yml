@@ -18,18 +18,35 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www
 
-  #Nginx Service
-  webserver:
-    image: nginx:alpine
-    container_name: informacion-nginx
-    restart: unless-stopped
-    volumes:
-      - ./:/var/www
-      - ./nginx/conf.d/:/etc/nginx/conf.d/
-    tty: true
+  
+
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    restart: always
     ports:
-      - "81:81"
-      - "444:444"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:ro
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+    labels:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+
+  www:
+    image: nginx
+    restart: always
+    expose:
+      - "81"
+    volumes:
+       - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    environment:
+      - VIRTUAL_HOST=lainformacioncanuelas.com,www.lainformacioncanuelas.com
+
 
   #MySQL Service
   db:
@@ -38,9 +55,16 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "3307:3307"
+      - "3306:3307"
     environment:
       MYSQL_DATABASE: la_informacion_db
       MYSQL_ROOT_PASSWORD: root
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+
+
+
+  volumes: 
+    certs:
+    html:
+    vhostd:
