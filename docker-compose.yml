@@ -17,6 +17,8 @@ services:
       SERVICE_NAME: healthyorchards
       SERVICE_TAGS: dev
     working_dir: /var/www
+    networks:
+      - root_nginx-proxy
 
   #Nginx Service
   webserver:
@@ -27,9 +29,12 @@ services:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     tty: true
-    ports:
-      - "80:80"
-      - "443:443"
+    expose:
+      - "80"
+    environment:
+      - VIRTUAL_HOST=whoami.local
+    networks:
+      - root_nginx-proxy
 
   #MySQL Service
   db:
@@ -44,3 +49,10 @@ services:
       MYSQL_ROOT_PASSWORD: root
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+    networks:
+      - root_nginx-proxy
+
+#Network
+networks:
+  padre_nginx-proxy:
+    external: true
