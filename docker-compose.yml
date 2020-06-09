@@ -18,10 +18,11 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www
     networks:
-      - padre_nginx-proxy
+      - root_nginx-proxy
 
   #Nginx Service
   webserver:
+    image: nginx:alpine
     container_name: informacion-nginx
     restart: unless-stopped
     volumes:
@@ -33,7 +34,7 @@ services:
     environment:
       - VIRTUAL_HOST=lainformacioncanuelas.com,www.lainformacioncanuelas.com
     networks:
-      - padre_nginx-proxy
+      - root_nginx-proxy
 
   #MySQL Service
   db:
@@ -49,7 +50,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     networks:
-      - padre_nginx-proxy
+      - root_nginx-proxy
 
 #Network
 networks:
