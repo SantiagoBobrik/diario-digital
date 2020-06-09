@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: php-image
-    container_name: admin-php
+    container_name: informacion-php
     restart: unless-stopped
     volumes:
       - ./:/var/www
@@ -18,11 +18,10 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www
     networks:
-      - root_nginx-proxy
+      - padre_nginx-proxy
 
   #Nginx Service
   webserver:
-    image: nginx:alpine
     container_name: informacion-nginx
     restart: unless-stopped
     volumes:
@@ -34,7 +33,7 @@ services:
     environment:
       - VIRTUAL_HOST=whoami.local
     networks:
-      - root_nginx-proxy
+      - padre_nginx-proxy
 
   #MySQL Service
   db:
@@ -50,7 +49,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     networks:
-      - root_nginx-proxy
+      - padre_nginx-proxy
 
 #Network
 networks:
