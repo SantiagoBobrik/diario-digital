@@ -41,8 +41,8 @@
 			<div class="col-md-8 hot-post-left mt-3">
 
 				<div class="post post-thumb">
-					<a href="/noticia/{{$post->id}}" class="post-img trend-left"><img src="storage/{{$post->image}}"
-							alt=""></a>
+					<a href="/noticia/{{$post->id}}" class="post-img trend-left"><img
+							src="{{asset('storage/'.$post->image)}}" alt=""></a>
 					<div class="post-body">
 						<div class="post-category">
 							<a href="seccion/{{$post->getCategory->slug}}">{{$post->getCategory->name}}</a>
@@ -64,7 +64,7 @@
 
 				<div class="post post-thumb">
 					<a class="post-img trend-right" href="/noticia/{{$post->id}}"><img class="img-fluid"
-							src="storage/{{$post->image}}" alt=""></a>
+							src="{{asset('storage/'.$post->image)}}" alt=""></a>
 					<div class="post-body">
 						<div class="post-category">
 							<a href="seccion/{{$post->getCategory->slug}}">{{$post->getCategory->name}}</a>
@@ -83,8 +83,8 @@
 
 
 				<div class="post post-thumb">
-					<a class="post-img trend-right" href="/noticia/{{$post->id}}"><img src=" storage/{{$post->image}}"
-							alt=""></a>
+					<a class="post-img trend-right" href="/noticia/{{$post->id}}"><img
+							src="{{asset('storage/'.$post->image)}}" alt=""></a>
 					<div class="post-body">
 						<div class="post-category">
 							<a href="seccion/{{$post->getCategory->slug}}">{{$post->getCategory->name}}</a>

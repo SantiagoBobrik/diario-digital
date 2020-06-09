@@ -5,10 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta property="og:title" content="Diario La Informacion Cañuelas">
     <meta property="og:image" content="<?php echo e(asset('/images/logo.png')); ?>">
-    <link rel="icon" href="<?php echo e(asset('/images/logo.png')); ?>">
+    <link rel="icon" href="logo2.svg">
     <meta property="og:url" content="http://lainformacioncanuelas.com/">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
