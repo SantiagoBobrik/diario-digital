@@ -31,7 +31,7 @@ services:
     expose:
       - "80"
     environment:
-      - VIRTUAL_HOST=whoami.local
+      - VIRTUAL_HOST=lainformacioncanuelas.com,www.lainformacioncanuelas.com
     networks:
       - padre_nginx-proxy
 
@@ -53,5 +53,5 @@ services:
 
 #Network
 networks:
-  padre_nginx-proxy:
+  root_nginx-proxy:
     external: true
