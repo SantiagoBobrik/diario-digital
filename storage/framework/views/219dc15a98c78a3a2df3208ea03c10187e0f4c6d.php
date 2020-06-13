@@ -37,8 +37,8 @@
 			<div class="col-md-8 hot-post-left mt-3">
 
 				<div class="post post-thumb">
-					<a href="/noticia/<?php echo e($post->id); ?>" class="post-img trend-left"><img src="storage/<?php echo e($post->image); ?>"
-							alt=""></a>
+					<a href="/noticia/<?php echo e($post->id); ?>" class="post-img trend-left"><img
+							src="<?php echo e(asset('storage/'.$post->image)); ?>" alt=""></a>
 					<div class="post-body">
 						<div class="post-category">
 							<a href="seccion/<?php echo e($post->getCategory->slug); ?>"><?php echo e($post->getCategory->name); ?></a>
@@ -60,7 +60,7 @@
 
 				<div class="post post-thumb">
 					<a class="post-img trend-right" href="/noticia/<?php echo e($post->id); ?>"><img class="img-fluid"
-							src="storage/<?php echo e($post->image); ?>" alt=""></a>
+							src="<?php echo e(asset('storage/'.$post->image)); ?>" alt=""></a>
 					<div class="post-body">
 						<div class="post-category">
 							<a href="seccion/<?php echo e($post->getCategory->slug); ?>"><?php echo e($post->getCategory->name); ?></a>
@@ -79,8 +79,8 @@
 
 
 				<div class="post post-thumb">
-					<a class="post-img trend-right" href="/noticia/<?php echo e($post->id); ?>"><img src=" storage/<?php echo e($post->image); ?>"
-							alt=""></a>
+					<a class="post-img trend-right" href="/noticia/<?php echo e($post->id); ?>"><img
+							src="<?php echo e(asset('storage/'.$post->image)); ?>" alt=""></a>
 					<div class="post-body">
 						<div class="post-category">
 							<a href="seccion/<?php echo e($post->getCategory->slug); ?>"><?php echo e($post->getCategory->name); ?></a>
