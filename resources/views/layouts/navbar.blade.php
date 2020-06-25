@@ -42,8 +42,9 @@
                     <!-- /social -->
 
                     <!-- logo -->
-                    <div class="nav-logo">
-                        <a href="/" class="logo img-fluid"><img src="{{asset('/images/logo.png')}}" alt=""></a>
+                    <div class="">
+                        <a href="/" class="logo"><img class="img-fluid mt-4" width="40%"
+                                src="{{asset('/images/logo.png')}}" alt=""></a>
                     </div>
                     <!-- /logo -->
 
