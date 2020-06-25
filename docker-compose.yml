@@ -44,4 +44,3 @@ services:
       MYSQL_ROOT_PASSWORD: root
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
-
