@@ -11,5 +11,10 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 composer.lock
+<<<<<<< HEAD
+/bootstrap
+/storage
+=======
 docker-compose.yml
 
+>>>>>>> 5732442494a191467ddd6368126ac432c6cc34b6

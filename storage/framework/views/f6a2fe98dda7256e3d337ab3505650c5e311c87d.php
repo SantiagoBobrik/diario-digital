@@ -74,4 +74,4 @@
 
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/santiago/Documents/Proyectos/diario-la-informacion/resources/views/search.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/resources/views/search.blade.php ENDPATH**/ ?>

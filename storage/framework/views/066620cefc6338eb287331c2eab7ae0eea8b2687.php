@@ -65,4 +65,4 @@
         <?php endif; ?>
     </ul>
 </nav>
-<?php endif; ?><?php /**PATH /Users/santiago/Documents/Proyectos/diario-la-informacion/resources/views/vendor/pagination/bootstrap-4.blade.php ENDPATH**/ ?>
+<?php endif; ?><?php /**PATH /var/www/resources/views/vendor/pagination/bootstrap-4.blade.php ENDPATH**/ ?>
