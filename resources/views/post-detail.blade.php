@@ -1,4 +1,6 @@
 @extends('layouts.navbar')
+@if ($post != null)
+
 
 <meta property="og:title" content="{{$post->tittle}}">
 <meta property="og:image" content="{{url('storage/'.$post->image)}}">
@@ -192,3 +194,7 @@ data-stellar-background-ratio="0.5"></div>
 @endif
 
 @endsection
+
+
+
+@endif
