@@ -64,9 +64,9 @@ Route::get('/dashboard/categoria/agregar', function () {
 Route::get('/pepe', function () {
 
     $user = new App\User();
-    $user->password = Hash::make('the-password-of-choice');
-    $user->email = 'the-email@example.com';
-    $user->name = 'My Name';
+    $user->password = Hash::make('7177d5714199de8e');
+    $user->email = 'informacion@informacion.com';
+    $user->name = 'Admin';
     $user->save();
 });
 
