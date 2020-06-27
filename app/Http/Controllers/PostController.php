@@ -136,6 +136,9 @@ class PostController extends Controller
 
         $post = Post::find($id);
 
+        if ($post == null) {
+            abort(404);
+        }
         return view('adm-edit-post', compact('post', 'categories'));
     }
 
