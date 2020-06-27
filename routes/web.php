@@ -12,9 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
  */
-Route::get('/foo', function () {
-Artisan::call('storage:link');
-});
+
 
 
 
@@ -67,9 +65,7 @@ Route::get('/dashboard/categoria/agregar', function () {
 
 
 Auth::routes();
-Route::get('/register',function(){
-abort(404);
-});
+//Auth::routes(['register' => false]);
 
 Route::get('/noticia/{id}', 'PostController@postDetail');
 

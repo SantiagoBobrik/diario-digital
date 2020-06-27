@@ -56,9 +56,14 @@ class PostController extends Controller
         $horizontalAds =  $adController->getHorizontalAds();
 
         $post = Post::find($id);
+
         $ads = Ad::all();
 
         $categories = $categoryController->getAllCategory();
+
+        if ($post == null) {
+            abort(404);
+        }
 
         return view("post-detail", compact('post', 'normalAds', 'horizontalAds', 'categories'));
     }
@@ -68,10 +73,11 @@ class PostController extends Controller
         $this->validate(
             $req,
             [
-                'tittle' => 'required',
-                'content' => 'required',
-                'trend' => 'required',
-                'image' => 'required',
+                'tittle' => 'required | max:250',
+                'description' => 'max:3000',
+                'content' => 'required | max:15000',
+                'trend' => 'required | numeric',
+                'image' => 'required | max:250',
             ],
             [
                 'required' => "Ingresar :attribute",
