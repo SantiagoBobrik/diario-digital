@@ -79,7 +79,3 @@ Route::get('/seccion/{slug}', 'CategoryController@getCategory');
 
 
 Route::get('/', 'HomeController@home');
-Route::get('/link', function () {
-
-    Artisan::call('storage:link');
-});
