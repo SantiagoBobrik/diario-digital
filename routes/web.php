@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Hash;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,11 +61,18 @@ Route::get('/dashboard/categoria/agregar', function () {
 })->middleware('auth');
 
 /* ------------------------- END SECTION PANEL ADMIN ------------------------ */
+Route::get('/pepe', function () {
+
+    $user = new App\User();
+    $user->password = Hash::make('the-password-of-choice');
+    $user->email = 'the-email@example.com';
+    $user->name = 'My Name';
+    $user->save();
+});
 
 
-
-Auth::routes();
-//Auth::routes(['register' => false]);
+//Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/noticia/{id}', 'PostController@postDetail');
 
