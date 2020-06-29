@@ -89,7 +89,7 @@
                     <div class="form-group ">
                         <label for="exampleFormControlFile1">Foto</label>
                         <input value="{{old("image")}}" name="image" type="file" class="form-control-file"
-                            id="exampleFormControlFile1">
+                            id="exampleFormControlFile1" accept="image/*">
                     </div>
                 </div>
 
