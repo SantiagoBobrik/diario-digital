@@ -61,15 +61,15 @@ Route::get('/dashboard/categoria/agregar', function () {
 })->middleware('auth');
 
 /* ------------------------- END SECTION PANEL ADMIN ------------------------ */
-// Route::get('/pepe', function () {
+/* Route::get('/pepe', function () {
 
-//     $user = new App\User();
-//     $user->password = Hash::make('7177d5714199de8e');
-//     $user->email = 'informacion@informacion.com';
-//     $user->name = 'Admin';
-//     $user->save();
-// });
-
+     $user = new App\User();
+     $user->password = Hash::make('7177d5714199de8e');
+     $user->email = 'informacion@informacion.com';
+     $user->name = 'Admin';
+     $user->save();
+ });
+*/
 
 //Auth::routes();
 Auth::routes(['register' => false]);

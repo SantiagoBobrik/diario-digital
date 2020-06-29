@@ -1,3 +1,6 @@
+<?php if($post != null): ?>
+
+
 <meta property="og:title" content="<?php echo e($post->tittle); ?>">
 <meta property="og:image" content="<?php echo e(url('storage/'.$post->image)); ?>">
 <meta property="og:url" content="http://lainformacioncanuelas.com/noticia/<?php echo e($post->id); ?>">
@@ -168,4 +171,8 @@
 <?php endif; ?>
 
 <?php $__env->stopSection(); ?>
+
+
+
+<?php endif; ?>
 <?php echo $__env->make('layouts.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/resources/views/post-detail.blade.php ENDPATH**/ ?>
