@@ -151,7 +151,7 @@ class PostController extends Controller
                 'description' => 'max:3000',
                 'content' => 'required | max:15000',
                 'trend' => 'required | numeric',
-                'image' => 'required | mimes:jpeg,jpg,png ',
+                'image' => 'mimes:jpeg,jpg,png ',
             ],
             [
                 'required' => "Ingresar :attribute",

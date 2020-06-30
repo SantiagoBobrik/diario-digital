@@ -70,7 +70,7 @@ class AdController extends Controller
                 'url' => 'required | max:250',
                 'type' => 'required | numeric |  max:2',
                 'position' => 'required | numeric | max:2',
-                'image' => 'required | mimes:jpeg,jpg,png ',
+                'image' => ' mimes:jpeg,jpg,png ',
 
             ],
             [
