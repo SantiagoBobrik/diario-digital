@@ -91,7 +91,7 @@
                         <label for="exampleFormControlSelect1">Posicion</label>
 
                         <input value="<?php echo e($ad->position); ?>" name="position" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                            id="exampleInputEmail1" aria-describedby="emailHelp" accept="image/*">
 
                     </div>
 

@@ -17,11 +17,11 @@ class AdController extends Controller
         $this->validate(
             $req,
             [
-                'name' => 'required | mac:250',
+                'name' => 'required | max:250',
                 'url' => 'required | max:250',
-                'type' => 'required | numeric |  max:2',
-                'position' => 'required | numeric | max:2',
-                'image' => 'required | mimes:jpeg,jpg,png ',
+                'type' => 'required | max:20',
+                'position' => 'required | numeric',
+                'image' => 'required | mimes:jpeg,jpg,png,gif',
 
             ],
             [
@@ -68,9 +68,9 @@ class AdController extends Controller
             [
                 'name' => 'required | max:250',
                 'url' => 'required | max:250',
-                'type' => 'required | numeric |  max:2',
-                'position' => 'required | numeric | max:2',
-                'image' => ' mimes:jpeg,jpg,png ',
+                'type' => 'required | max:20',
+                'position' => 'required | numeric ',
+                'image' => ' mimes:jpeg,jpg,png,gif',
 
             ],
             [
