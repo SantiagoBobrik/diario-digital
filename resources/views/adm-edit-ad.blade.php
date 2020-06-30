@@ -95,7 +95,7 @@
                         <label for="exampleFormControlSelect1">Posicion</label>
 
                         <input value="{{$ad->position}}" name="position" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                            id="exampleInputEmail1" aria-describedby="emailHelp" accept="image/*">
 
                     </div>
 

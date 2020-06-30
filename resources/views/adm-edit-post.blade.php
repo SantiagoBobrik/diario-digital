@@ -93,7 +93,8 @@
                     <div class="form-group ">
                         <label for="exampleFormControlFile1">Foto</label>
                         <input type="hidden" name="image_name" value="{{$post->image}}">
-                        <input value="" name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <input value="" name="image" type="file" class="form-control-file" id="exampleFormControlFile1"
+                            accept="image/*">
 
 
                     </div>
