@@ -17,11 +17,12 @@ class AdController extends Controller
         $this->validate(
             $req,
             [
-                'name' => 'required',
-                'url' => 'required',
-                'type' => 'required',
-                'position' => 'required',
-                'image' => 'required',
+                'name' => 'required | mac:250',
+                'url' => 'required | max:250',
+                'type' => 'required | numeric |  max:2',
+                'position' => 'required | numeric | max:2',
+                'image' => 'required | mimes:jpeg,jpg,png ',
+
             ],
             [
                 'required' => "Ingresar :attribute",
@@ -62,6 +63,20 @@ class AdController extends Controller
     public function updateAd(Request $req)
     {
 
+        $this->validate(
+            $req,
+            [
+                'name' => 'required | mac:250',
+                'url' => 'required | max:250',
+                'type' => 'required | numeric |  max:2',
+                'position' => 'required | numeric | max:2',
+                'image' => 'required | mimes:jpeg,jpg,png ',
+
+            ],
+            [
+                'required' => "Ingresar :attribute",
+            ]
+        );
 
         $Ad = Ad::find($req['id']);
         $Ad->name = $req["name"];

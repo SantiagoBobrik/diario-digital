@@ -144,6 +144,19 @@ class PostController extends Controller
 
     public function updatePost(Request $req)
     {
+        $this->validate(
+            $req,
+            [
+                'tittle' => 'required | max:250',
+                'description' => 'max:3000',
+                'content' => 'required | max:15000',
+                'trend' => 'required | numeric',
+                'image' => 'required | mimes:jpeg,jpg,png ',
+            ],
+            [
+                'required' => "Ingresar :attribute",
+            ]
+        );
 
         if ($req['trend'] != 0) {
 

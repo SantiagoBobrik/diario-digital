@@ -130,7 +130,12 @@
                         <button id="agregar" type="submit"
                             class="btn btn-success btn-lg btn-block mb-5">Agregar</button>
 
-                        </select>
+                        @foreach ($errors->all() as $item)
+                        <div class="alert alert-danger" role="alert">
+                            {{$item}}
+
+                        </div>
+                        @endforeach
                     </div>
 
                 </div>
